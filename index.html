@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Takoyaki dari Tuhan | Kuliner Malam Banyumanik & Pudakpayung</title>
+    <meta name="description" content="Takoyaki Premium 'Dari Tuhan' cabang Pudakpayung, Banyumanik. Buka sampai jam 23:59! Topping melimpah, Halal, rasa otentik Jepang. Order via WA sekarang.">
+    <meta name="keywords" content="Takoyaki Banyumanik, Kuliner Malam Semarang, Jajanan Pudakpayung, Takoyaki Enak Semarang, Street Food Premium">
+    <meta name="author" content="Takoyaki dari Tuhan">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#e67e22">
+    
+    <meta property="og:title" content="Takoyaki dari Tuhan - Cabang Banyumanik">
+    <meta property="og:description" content="Lapar tengah malam? Kami buka sampai jam 23:59 di Pudakpayung! Klik untuk lihat menu.">
+    <meta property="og:image" content="./mix-super-wahana-cheese-takoyaki.webp">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Takoyaki dari Tuhan - Outlet Banyumanik",
+      "image": "./mix-super-wahana-cheese-takoyaki.webp",
+      "telephone": "6285225870228",
+      "url": "https://takoyakidarituhan.vercel.app",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Dawung IV No 319, Pudakpayung",
+        "addressLocality": "Banyumanik",
+        "addressRegion": "Jawa Tengah",
+        "postalCode": "50265",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.0864, 
+        "longitude": 110.4208
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "23:59"
+      },
+      "menu": "https://takoyakidarituhan.vercel.app/#menu",
+      "priceRange": "Rp 15.000 - Rp 30.000",
+      "servesCuisine": "Japanese Street Food"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root { 
+            --gold: #e67e22; 
+            --orange-glow: #d35400; 
+            --bg-dark: #050505; 
+            --card-glass: rgba(255, 255, 255, 0.03); 
+        }
+        
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-dark); font-family: 'Plus Jakarta Sans', sans-serif; color: #fff; overflow-x: hidden; }
+
+        /* BUTTON AURA (EFEK LASER) */
+        .aura-btn-glow {
+            position: relative; padding: 14px 30px; border-radius: 12px;
+            background: #000; color: #fff; font-weight: 800; font-size: 12px;
+            letter-spacing: 1px; text-transform: uppercase; display: inline-flex;
+            align-items: center; justify-content: center; overflow: hidden; border: none;
+            cursor: pointer; transition: 0.5s; text-decoration: none;
+        }
+        .aura-btn-glow::before {
+            content: ""; position: absolute; inset: -150%;
+            background: conic-gradient(from 0deg, transparent 0deg, transparent 280deg, var(--gold) 320deg, var(--orange-glow) 360deg);
+            animation: rotate-aura 3s linear infinite; z-index: 0;
+        }
+        .aura-btn-glow::after {
+            content: ""; position: absolute; inset: 2px;
+            background: #0a0a0a; border-radius: 10px; z-index: 1;
+        }
+        .aura-btn-glow .content { position: relative; z-index: 2; display: flex; align-items: center; gap: 8px; }
+        .aura-btn-glow:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(230, 126, 34, 0.4); }
+
+        @keyframes rotate-aura { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* HERO GRADIENT (PENGGANTI FOTO) */
+        .hero-gradient {
+            min-height: 90vh; 
+            background: radial-gradient(circle at 50% 50%, #4a2005 0%, #000000 70%);
+            display: flex; align-items: center; justify-content: center; position: relative;
+        }
+        /* Animasi Partikel Debu Emas */
+        .hero-gradient::before {
+            content: ""; position: absolute; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e67e22' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        /* BENTO GRID CARD */
+        .bento-card {
+            background: var(--card-glass); backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden;
+        }
+        .bento-card:hover { border-color: var(--gold); transform: translateY(-5px); background: rgba(255,255,255,0.05); }
+
+        /* FLOATING WHATSAPP */
+        .floating-wa {
+            position: fixed; bottom: 25px; right: 25px; z-index: 999;
+            background: #25d366; width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); animation: pulse-wa 2s infinite;
+        }
+        @keyframes pulse-wa { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
+        .text-gradient-gold { background: linear-gradient(to right, #fff, var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+    </style>
+</head>
+<body>
+
+    <header class="fixed top-0 w-full z-[100] px-6 py-4 flex justify-between items-center backdrop-blur-xl border-b border-white/5 bg-black/70">
+        <div class="text-xl font-black tracking-tighter italic text-white leading-none">
+            TAKOYAKI<br><span class="text-orange-500 text-sm">DARI TUHAN.</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-400">
+            <a href="#hero" class="hover:text-orange-500 transition">Home</a>
+            <a href="#menu" class="hover:text-orange-500 transition">Menu Premium</a>
+            <a href="#location" class="hover:text-orange-500 transition">Lokasi</a>
+        </div>
+        <a href="https://wa.me/6285225870228?text=Halo%20Admin,%20saya%20mau%20pesan%20Takoyaki%20Cabang%20Banyumanik" target="_blank" class="aura-btn-glow !px-5 !py-2 !text-[10px]">
+            <div class="content">PESAN SEKARANG ➜</div>
+        </a>
+    </header>
+
+    <a href="https://wa.me/6285225870228?text=Halo%20Admin,%20saya%20mau%20tanya%20promo%20Takoyaki%20hari%20ini" class="floating-wa" target="_blank" aria-label="Chat WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.63 1.438h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+
+    <section id="hero" class="hero-gradient">
+        <div class="text-center px-6 max-w-4xl mx-auto z-10">
+            <span class="text-orange-500 font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-6 block animate-pulse">
+                • BUKA SETIAP HARI 08:00 - 23:59 •
+            </span>
+            <h1 class="text-5xl md:text-[90px] font-black tracking-tighter leading-[0.9] mb-8">
+                TAKOYAKI DARI<br><span class="text-gradient-gold italic">TUHAN.</span>
+            </h1>
+            <p class="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto mb-10 font-light">
+                Rasakan sensasi jajanan premium dengan topping melimpah. <br>
+                <strong class="text-white">Outlet Resmi Pudakpayung & Banyumanik.</strong>
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#menu" class="aura-btn-glow">
+                    <div class="content">LIHAT MENU</div>
+                </a>
+                <a href="https://wa.me/6285225870228?text=Halo%20Admin,%20Shareloc%20outlet%20Banyumanik%20dong" target="_blank" class="px-8 py-3 rounded-xl border border-white/20 hover:bg-white/10 transition text-xs font-bold tracking-widest uppercase">
+                    Petunjuk Arah 📍
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-24 container mx-auto px-4 md:px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+            <div>
+                <span class="text-orange-500 font-bold text-xs tracking-widest uppercase">Signature Menu</span>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tighter uppercase mt-2">Pilihan <span class="text-gradient-gold">Sultan.</span></h2>
+            </div>
+            <p class="text-gray-500 text-right text-xs font-bold uppercase tracking-widest max-w-xs">
+                Menggunakan Bahan Premium & Halal 100%. <br>Awas Ketagihan!
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+            
+            <div class="md:col-span-8 bento-card min-h-[400px] md:min-h-[500px] group cursor-pointer">
+                <img src="./mix-super-wahana-cheese-takoyaki.webp" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" loading="lazy" alt="Mix Super Wahana Cheese">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-8 md:p-10 w-full">
+                    <div class="bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded inline-block mb-3">BEST SELLER</div>
+                    <h3 class="text-3xl md:text-5xl font-black mb-2 leading-tight">Mix Super Wahana <br>Cheese Explosion</h3>
+                    <p class="text-gray-300 text-sm max-w-lg mb-6 line-clamp-2">Perpaduan takoyaki panas dengan keju lumer yang meledak di mulut. Menu wajib coba!</p>
+                    <div class="flex items-center justify-between border-t border-white/10 pt-6">
+                        <div class="text-2xl font-black text-white">Mulai 15K</div>
+                        <a href="https://wa.me/6285225870228?text=Mau%20Order%20Mix%20Wahana%20Cheese" class="aura-btn-glow !px-4 !py-2 !text-[10px]">
+                            <div class="content">ORDER NOW</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 bento-card p-6 flex flex-col justify-between group">
+                <div class="w-full aspect-square rounded-2xl overflow-hidden mb-4 border border-white/10">
+                    <img src="./super-cheesy-takoyaki.webp" class="w-full h-full object-cover group-hover:scale-110 transition" loading="lazy" alt="Super Cheesy">
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold group-hover:text-orange-500 transition">Super Cheesy Takoyaki</h3>
+                    <div class="flex justify-between items-center mt-3">
+                        <span class="text-gray-400 text-xs">Full Keju</span>
+                        <span class="font-bold text-orange-500">20K</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-12 bento-card overflow-hidden group h-[250px] relative flex items-center">
+                <img src="./okonomiyaki-istimewa-takoyaki.webp" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition duration-700" loading="lazy" alt="Okonomiyaki">
+                <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+                <div class="relative z-10 p-8 md:p-12 max-w-2xl">
+                    <span class="text-orange-400 font-bold tracking-widest text-xs uppercase mb-2 block">Menu Kenyang</span>
+                    <h3 class="text-3xl md:text-4xl font-black mb-4">Okonomiyaki Istimewa</h3>
+                    <p class="text-gray-300 text-sm mb-6">Pancake Jepang gurih dengan topping katsuobushi yang menari-nari.</p>
+                    <a href="https://wa.me/6285225870228?text=Mau%20Order%20Okonomiyaki" class="text-xs font-bold border-b border-orange-500 pb-1 hover:text-orange-500 transition">PESAN SEKARANG</a>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 bento-card p-4 group">
+                <div class="overflow-hidden rounded-xl h-48 mb-4">
+                    <img src="./ramen-takoyaki.webp" class="w-full h-full object-cover group-hover:scale-110 transition" loading="lazy" alt="Ramen Takoyaki">
+                </div>
+                <h4 class="font-bold text-lg">Ramen Takoyaki</h4>
+                <p class="text-xs text-gray-400 mt-1">Kuah pedas nampol.</p>
+            </div>
+
+            <div class="md:col-span-4 bento-card p-4 group">
+                <div class="overflow-hidden rounded-xl h-48 mb-4">
+                    <img src="./makaroni-telor-maklor-takoyaki.webp" class="w-full h-full object-cover group-hover:scale-110 transition" loading="lazy" alt="Maklor">
+                </div>
+                <h4 class="font-bold text-lg">Maklor Spesial</h4>
+                <p class="text-xs text-gray-400 mt-1">Jajanan SD naik kelas.</p>
+            </div>
+
+            <div class="md:col-span-4 bento-card p-4 group bg-orange-600/20 border-orange-500/50">
+                <div class="overflow-hidden rounded-xl h-48 mb-4 relative">
+                    <img src="./voucher-bithday-sale-takoyaki.webp" class="w-full h-full object-cover group-hover:scale-110 transition" loading="lazy" alt="Promo">
+                    <div class="absolute top-2 right-2 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded">PROMO</div>
+                </div>
+                <h4 class="font-bold text-lg text-orange-400">Voucher & Promo</h4>
+                <a href="https://wa.me/6285225870228?text=Info%20Promo%20Voucher%20Dong" class="text-xs mt-2 inline-block underline">Klaim via WhatsApp →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 bg-white/5 border-y border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-10 italic">APA KATA MEREKA?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bento-card p-6">
+                    <div class="text-orange-500 mb-4">★★★★★</div>
+                    <p class="text-gray-300 text-sm italic">"Penyelamat lapar tengah malam di Banyumanik! Rasanya beneran premium, bukan kaleng-kaleng."</p>
+                    <div class="mt-4 font-bold text-xs uppercase text-gray-500">- Warga Pudakpayung</div>
+                </div>
+                <div class="bento-card p-6">
+                    <div class="text-orange-500 mb-4">★★★★★</div>
+                    <p class="text-gray-300 text-sm italic">"Kejunya melimpah banget, anak-anak saya suka. Pelayanan juga ramah."</p>
+                    <div class="mt-4 font-bold text-xs uppercase text-gray-500">- Pelanggan Setia</div>
+                </div>
+                <div class="bento-card p-6">
+                    <div class="text-orange-500 mb-4">★★★★★</div>
+                    <img src="./ekspresi-menikmati-takoyaki.webp" class="w-12 h-12 rounded-full mx-auto mt-2 object-cover border border-orange-500" alt="Testi">
+                    <p class="text-gray-300 text-sm italic mt-2">"Foto tidak menipu. Rasanya sesuai ekspektasi!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-24 container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            
+            <div class="bento-card p-2 h-[400px] relative">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.1799945682337!2d110.40387238885496!3d-7.105127799999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708989dcb2a2ef%3A0xaa83a5f17b6a8e7a!2sTakoyaki%20dari%20Tuhan%20Untuk%20Kamu%20dan%20Aku%20Outlet%2002!5e0!3m2!1sid!2sid!4v1769704039454!5m2!1sid!2sid" 
+                    width="100%" height="100%" 
+                    style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(90%); border-radius: 20px;" 
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="absolute inset-0 pointer-events-none rounded-[20px] ring-1 ring-white/10 shadow-[inset_0_0_50px_rgba(0,0,0,0.5)]"></div>
+            </div>
+
+            <div class="md:pl-10 text-center md:text-left">
+                <h2 class="text-4xl font-black italic mb-8 uppercase">KUNJUNGI <span class="text-orange-500">OUTLET KAMI.</span></h2>
+                
+                <div class="space-y-8">
+                    <div class="flex flex-col md:flex-row gap-4 items-center md:items-start">
+                        <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-2xl">📍</div>
+                        <div>
+                            <h4 class="text-orange-500 font-bold text-xs uppercase tracking-widest mb-1">Alamat</h4>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                Jl. Dawung IV No 319, Pudakpayung,<br>
+                                Kec. Banyumanik, Kota Semarang.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-4 items-center md:items-start">
+                        <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-2xl">⏰</div>
+                        <div>
+                            <h4 class="text-orange-500 font-bold text-xs uppercase tracking-widest mb-1">Jam Operasional</h4>
+                            <p class="text-white text-xl font-bold">
+                                08:00 - 23:59 WIB
+                            </p>
+                            <p class="text-gray-500 text-xs mt-1">Buka Setiap Hari</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <a href="https://wa.me/6285225870228?text=Admin,%20tolong%20shareloc%20peta%20outlet%20Pudakpayung" target="_blank" class="aura-btn-glow w-full md:w-auto justify-center">
+                            <div class="content">DAPATKAN ARAH (GOOGLE MAPS)</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center bg-black relative overflow-hidden">
+        <div class="text-2xl font-black italic mb-4 tracking-tighter">TAKOYAKI<span class="text-orange-500">TUHAN.</span></div>
+        <p class="text-[10px] font-bold text-gray-600 tracking-[0.5em] uppercase mb-8">
+            SINCE 2024 • BANYUMANIK PRIDE
+        </p>
+        <div class="text-gray-700 text-[10px]">
+            &copy; 2026 Takoyaki Dari Tuhan. All Rights Reserved.<br>
+            <span class="opacity-50">Designed with Naga Titan Protocol.</span>
+        </div>
+        
+        <div class="mt-10 pt-10 border-t border-white/5 text-[9px] text-gray-800 leading-relaxed max-w-4xl mx-auto px-6 select-none grayscale opacity-30">
+            Takoyaki enak di Banyumanik Pudakpayung buka sampai malam 24 jam. Jajanan kuliner malam Semarang atas dekat Transmart Setiabudi dan Kodam Diponegoro. Makanan halal sertifikat topping keju mozarella melimpah. Pesan antar GoFood GrabFood ShopeeFood Semarang. Snack box murah untuk arisan dan ulang tahun di Ungaran dan Tembalang.
+        </div>
+    </footer>
+
+</body>
+</html>
