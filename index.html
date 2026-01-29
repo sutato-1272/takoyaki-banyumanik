@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>TaKOYAKI dari Tuhan untuk Kamu dan Aku | Kuliner Semarang</title>
-    <meta name="description" content="Sensasi Takoyaki Premium di Semarang. Topping melimpah, Halal, dan buka sampai malam. Outlet: Banyumanik, Ungaran, Tembalang.">
+    <title>TAKOYAKI DARI TUHAN UNTUK KAMU DAN AKU | Kuliner Semarang</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -26,17 +25,17 @@
                         brand: {
                             orange: '#FF5500',
                             gold: '#FFD700',
-                            dark: '#050505',
+                            dark: '#000000',
                             glass: 'rgba(255, 255, 255, 0.08)'
                         }
                     },
                     animation: {
-                        'float': 'float 6s ease-in-out infinite',
+                        'marquee': 'marquee 25s linear infinite',
                     },
                     keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
                         }
                     }
                 }
@@ -45,266 +44,218 @@
     </script>
 
     <style>
-        body { background-color: #050505; color: white; overflow-x: hidden; }
+        body { background-color: #000; color: white; overflow-x: hidden; }
         
-        /* BACKGROUND AMBIENCE */
+        /* BACKGROUND GLOW */
         .ambient-glow {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;
-            background: 
-                radial-gradient(circle at 15% 50%, rgba(255, 85, 0, 0.15), transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(255, 215, 0, 0.1), transparent 25%);
+            background: radial-gradient(circle at 50% -20%, rgba(255, 85, 0, 0.2), transparent 50%);
             pointer-events: none;
         }
 
         /* GLASS CARD PREMIUM */
-        .glass-panel {
-            background: var(--brand-glass);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
         .glass-card {
-            background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
         }
         .glass-card:hover {
-            transform: translateY(-8px);
             border-color: #FF5500;
-            box-shadow: 0 20px 40px -10px rgba(255, 85, 0, 0.3);
+            box-shadow: 0 0 30px rgba(255, 85, 0, 0.15);
         }
 
-        /* TEXT STROKE EFFECT */
-        .text-outline {
-            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
-            color: transparent;
+        /* MENU CARD (NO CROP) */
+        .menu-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
         }
-
-        /* CUSTOM SCROLLBAR */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #FF5500; }
     </style>
 </head>
 <body class="antialiased">
 
     <div class="ambient-glow"></div>
     
-    <nav class="fixed top-2 md:top-6 left-0 right-0 z-50 px-2 md:px-0">
-        <div class="max-w-5xl mx-auto glass-panel rounded-2xl md:rounded-full px-4 md:px-6 py-3 flex justify-between items-center shadow-2xl shadow-orange-900/20">
-            <div class="flex flex-col md:flex-row md:items-center gap-0 md:gap-2 leading-tight">
-                <div class="font-display font-bold text-sm md:text-lg tracking-tight text-white">
-                    TaKOYAKI <span class="text-brand-orange">dari Tuhan</span>
-                </div>
-                <div class="text-[10px] md:text-xs font-light italic text-gray-400">
-                    untuk Kamu dan Aku
-                </div>
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex flex-col leading-none">
+                <span class="font-display font-black text-lg md:text-xl tracking-tighter">TAKOYAKI DARI TUHAN</span>
+                <span class="font-sans text-[10px] md:text-xs tracking-widest text-brand-orange uppercase">UNTUK KAMU DAN AKU</span>
             </div>
-            
-            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
-                <a href="#menu" class="hover:text-white transition">Menu</a>
-                <a href="#promo" class="hover:text-white transition">Promo</a>
-                <a href="#lokasi" class="hover:text-white transition">Lokasi</a>
-            </div>
-            <a href="https://wa.me/6285225870228" target="_blank" class="bg-white text-black px-4 py-2 md:px-5 rounded-xl md:rounded-full text-[10px] md:text-xs font-black uppercase hover:bg-brand-orange hover:text-white transition duration-300 whitespace-nowrap">
-                Pesan Sekarang
+            <a href="https://wa.me/6285225870228" class="bg-brand-orange text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-white hover:text-black transition">
+                PESAN SEKARANG
             </a>
         </div>
     </nav>
 
-    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/comfy-snack-jepang-takoyaki.webp" class="w-full h-full object-cover opacity-60 scale-105 animate-pulse duration-[10s]" alt="Hero Background">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40"></div>
-        </div>
-
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
-            <div class="inline-flex items-center gap-2 border border-white/20 bg-white/5 rounded-full px-4 py-1.5 mb-6 backdrop-blur-md">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-white/80">Buka Setiap Hari 08:00 - 23:59</span>
-            </div>
-            
-            <h1 class="font-display text-5xl md:text-7xl font-black leading-[0.9] mb-6 tracking-tight drop-shadow-2xl">
-                RASA SURGA YANG<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-gold italic">TURUN KE BUMI.</span>
-            </h1>
-            
-            <p class="text-gray-300 text-base md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed">
-                Nikmati keajaiban Takoyaki Premium dengan topping melimpah. <br> 
-                Tekstur lembut di dalam, renyah di luar. Halal & Otentik.
-            </p>
-            
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="#menu" class="group relative px-8 py-4 bg-brand-orange rounded-2xl font-bold text-sm overflow-hidden text-white shadow-lg shadow-orange-600/30 hover:scale-105 transition w-full md:w-auto">
-                    <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition duration-300"></div>
-                    <span class="relative flex items-center justify-center gap-2">LIHAT MENU <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
-                </a>
-                <a href="https://wa.me/6285225870228" class="px-8 py-4 rounded-2xl border border-white/20 font-bold text-sm hover:bg-white/10 transition backdrop-blur-sm w-full md:w-auto">
-                    INFO KEMITRAAN / EVENT
-                </a>
-            </div>
+            <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/comfy-snack-jepang-takoyaki.webp" class="w-full h-full object-cover opacity-50 scale-105 animate-[pulse_10s_infinite]" alt="Hero">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
         </div>
         
-        <div class="absolute bottom-10 left-0 w-full flex justify-center gap-4 md:gap-12 opacity-60 text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase px-4 text-center">
-            <span>• 100% Halal MUI</span>
-            <span>• Bahan Premium</span>
-            <span>• Resep Asli Jepang</span>
+        <div class="relative z-10 text-center px-4 max-w-5xl">
+            <div class="inline-block border border-brand-orange/50 bg-brand-orange/10 px-4 py-1 rounded-full text-brand-orange text-[10px] font-bold tracking-[0.3em] uppercase mb-6 backdrop-blur-md">
+                Outlet Resmi Banyumanik
+            </div>
+            <h1 class="font-display text-5xl md:text-8xl font-black leading-none mb-6">
+                RASA SURGA<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-gold">TURUN KE BUMI.</span>
+            </h1>
+            <p class="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto mb-10 font-light">
+                Nikmati sensasi Takoyaki Premium dengan topping melimpah ruah. <br>
+                100% Halal, Bahan Premium, Resep Otentik Jepang.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#menu-favorit" class="bg-brand-orange px-8 py-4 rounded-xl text-sm font-bold text-white hover:scale-105 transition shadow-[0_0_20px_rgba(255,85,0,0.4)]">
+                    LIHAT MENU FAVORIT
+                </a>
+                <a href="#buku-menu" class="border border-white/20 px-8 py-4 rounded-xl text-sm font-bold text-white hover:bg-white/10 transition">
+                    DAFTAR HARGA LENGKAP
+                </a>
+            </div>
         </div>
     </header>
 
-    <div class="bg-brand-orange py-3 overflow-hidden whitespace-nowrap relative z-20 -rotate-1 shadow-xl border-y-4 border-black">
-        <div class="inline-block animate-[float_10s_linear_infinite]">
-            <span class="text-black font-black italic text-lg md:text-xl mx-4">🔥 PROMO SPESIAL</span>
-            <span class="text-black font-black italic text-lg md:text-xl mx-4">🔥 BELI BANYAK LEBIH MURAH</span>
-            <span class="text-black font-black italic text-lg md:text-xl mx-4">🔥 DISKON KHUSUS PELAJAR</span>
-            <span class="text-black font-black italic text-lg md:text-xl mx-4">🔥 MENU BARU</span>
+    <div class="bg-brand-orange py-3 overflow-hidden border-y border-black">
+        <div class="animate-marquee whitespace-nowrap flex gap-8">
+            <span class="text-black font-black text-lg italic uppercase">🔥 DISKON SPESIAL HARI INI</span>
+            <span class="text-black font-black text-lg italic uppercase">🔥 TOPPING MELIMPAH</span>
+            <span class="text-black font-black text-lg italic uppercase">🔥 100% HALAL MUI</span>
+            <span class="text-black font-black text-lg italic uppercase">🔥 BUKA SAMPAI 23:59 WIB</span>
+            <span class="text-black font-black text-lg italic uppercase">🔥 DISKON SPESIAL HARI INI</span>
+            <span class="text-black font-black text-lg italic uppercase">🔥 TOPPING MELIMPAH</span>
+            <span class="text-black font-black text-lg italic uppercase">🔥 100% HALAL MUI</span>
         </div>
     </div>
 
-    <section id="menu" class="py-24 px-4 md:px-8 relative z-10">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div>
-                    <span class="text-brand-orange font-bold text-xs tracking-widest uppercase mb-2 block">Menu Favorit</span>
-                    <h2 class="font-display text-4xl md:text-6xl font-black">MENU <span class="text-outline">ANDALAN</span></h2>
-                </div>
-                <p class="text-gray-400 text-sm max-w-xs text-right mt-4 md:mt-0 italic">
-                    "Dibuat dengan cinta yang tulus untuk kamu dan aku."
-                </p>
+    <section id="menu-favorit" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-4xl md:text-5xl font-black mb-2">SIGNATURE <span class="text-brand-orange">DISH</span></h2>
+                <p class="text-gray-400 text-sm">Menu wajib coba yang bikin ketagihan.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[250px]">
-                
-                <div class="glass-card rounded-3xl md:col-span-2 md:row-span-2 relative overflow-hidden group">
-                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/mix-super-wahana-cheese-takoyaki.webp" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Mix Wahana">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
-                    <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
-                        <div class="flex justify-between items-end">
-                            <div>
-                                <span class="bg-brand-orange text-white text-[10px] font-bold px-2 py-1 rounded mb-2 inline-block">PALING LARIS</span>
-                                <h3 class="font-display text-2xl md:text-3xl font-bold leading-tight mb-1">Mix Wahana Cheese</h3>
-                                <p class="text-gray-300 text-xs md:text-sm mb-4">Ledakan keju di setiap gigitan.</p>
-                            </div>
-                            <div class="text-xl md:text-2xl font-black text-brand-gold">Mulai 15K</div>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[300px]">
+                <div class="glass-card md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/mix-super-wahana-cheese-takoyaki.webp" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Mix Wahana">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <span class="bg-brand-orange text-white text-[10px] font-bold px-2 py-1 rounded">BEST SELLER</span>
+                        <h3 class="font-display text-3xl font-black mt-2">Mix Wahana Cheese</h3>
+                        <p class="text-gray-300 text-sm">Ledakan keju di setiap gigitan.</p>
                     </div>
                 </div>
 
-                <div class="glass-card rounded-3xl relative overflow-hidden group">
-                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/super-cheesy-takoyaki.webp" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" alt="Cheesy">
-                    <div class="absolute bottom-0 left-0 p-5 bg-gradient-to-t from-black to-transparent w-full">
-                        <h3 class="font-bold text-lg">Super Cheesy</h3>
-                        <p class="text-xs text-gray-400">Full Keju Luar Dalam</p>
+                <div class="glass-card rounded-3xl overflow-hidden relative group">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/super-cheesy-takoyaki.webp" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Cheesy">
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-transparent transition"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <h3 class="font-bold text-xl">Super Cheesy</h3>
                     </div>
                 </div>
 
-                <div class="glass-card rounded-3xl relative overflow-hidden group md:col-span-1 md:row-span-2">
-                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/okonomiyaki-istimewa-takoyaki.webp" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-60 group-hover:opacity-100" alt="Okonomiyaki">
-                    <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <h3 class="font-display text-2xl font-black mb-2 rotate-0 md:-rotate-90 md:origin-bottom-left md:translate-x-8 md:-translate-y-8 whitespace-nowrap">OKONOMIYAKI</h3>
-                        <div class="md:hidden">
-                            <p class="text-xs text-gray-300">Pancake Jepang Jumbo</p>
-                        </div>
+                <div class="glass-card rounded-3xl overflow-hidden relative group md:row-span-2">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/okonomiyaki-istimewa-takoyaki.webp" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Okonomiyaki">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4">
+                        <h3 class="font-bold text-xl">Okonomiyaki</h3>
+                        <p class="text-xs text-gray-400">Pancake Jepang Jumbo</p>
                     </div>
                 </div>
 
-                <div class="glass-card rounded-3xl relative overflow-hidden group">
-                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/ramen-takoyaki.webp" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" alt="Ramen">
-                    <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold border border-white/10">PEDAS</div>
-                    <div class="absolute bottom-0 left-0 p-5 w-full bg-gradient-to-t from-black to-transparent">
-                        <h3 class="font-bold">Ramen Takoyaki</h3>
+                <div class="glass-card rounded-3xl overflow-hidden relative group">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/ramen-takoyaki.webp" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Ramen">
+                    <div class="absolute bottom-4 left-4 bg-black/50 px-3 py-1 rounded-full backdrop-blur-md">
+                        <h3 class="font-bold text-sm">Ramen Takoyaki</h3>
                     </div>
                 </div>
 
-                <div class="glass-card rounded-3xl relative overflow-hidden group">
-                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/makaroni-telor-maklor-takoyaki.webp" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" alt="Maklor">
-                    <div class="absolute bottom-0 left-0 p-5 w-full bg-gradient-to-t from-black to-transparent">
-                        <h3 class="font-bold">Maklor Spesial</h3>
+                 <div class="glass-card rounded-3xl overflow-hidden relative group md:col-span-2">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/makaroni-telor-maklor-takoyaki.webp" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Maklor">
+                    <div class="absolute bottom-4 left-4 bg-black/50 px-3 py-1 rounded-full backdrop-blur-md">
+                        <h3 class="font-bold text-sm">Maklor Spesial</h3>
                     </div>
                 </div>
-
-                <div class="glass-card rounded-3xl p-6 flex flex-col justify-center items-center text-center bg-brand-orange/10 border-brand-orange/30 group cursor-pointer hover:bg-brand-orange hover:border-brand-orange transition">
-                    <a href="https://wa.me/6285225870228?text=Info%20Promo" class="block">
-                        <i data-lucide="ticket" class="w-10 h-10 mb-3 mx-auto text-brand-orange group-hover:text-white transition"></i>
-                        <h3 class="font-black text-xl mb-1 text-white">VOUCHER PROMO</h3>
-                        <p class="text-xs text-gray-400 group-hover:text-white/80">Klik untuk klaim</p>
-                    </a>
-                </div>
-                
             </div>
         </div>
     </section>
 
-    <section class="py-12 border-y border-white/5 bg-white/[0.02]">
-        <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-center text-xs font-bold tracking-[0.3em] uppercase mb-8 text-gray-500">Galeri & Keseruan</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-01.webp" class="rounded-xl w-full h-32 md:h-48 object-cover grayscale hover:grayscale-0 transition duration-500 cursor-pointer" alt="Galeri 1">
-                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-02.webp" class="rounded-xl w-full h-32 md:h-48 object-cover grayscale hover:grayscale-0 transition duration-500 cursor-pointer" alt="Galeri 2">
-                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-03.webp" class="rounded-xl w-full h-32 md:h-48 object-cover grayscale hover:grayscale-0 transition duration-500 cursor-pointer" alt="Galeri 3">
-                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/ekspresi-menikmati-takoyaki.webp" class="rounded-xl w-full h-32 md:h-48 object-cover grayscale hover:grayscale-0 transition duration-500 cursor-pointer" alt="Testimoni">
+    <section id="buku-menu" class="py-20 px-4 bg-white/5 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-brand-orange font-bold tracking-widest text-xs uppercase">Daftar Harga</span>
+                <h2 class="font-display text-4xl md:text-5xl font-black text-white">BUKU MENU <span class="text-gray-500">LENGKAP</span></h2>
+                <p class="text-gray-400 text-sm mt-2">Geser atau klik gambar untuk melihat detail harga.</p>
             </div>
-        </div>
-    </section>
 
-    <section id="lokasi" class="pt-24 pb-12 px-4 relative">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="text-brand-orange font-bold text-xs tracking-widest uppercase mb-2 block">Kunjungi Kami</span>
-                <h2 class="font-display text-4xl md:text-5xl font-black mb-6">LOKASI <br>OUTLET.</h2>
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Banyumanik (Pusat)</h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">Jl. Dawung IV No 319, Pudakpayung,<br>Kec. Banyumanik, Semarang.</p>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="menu-card glass-card p-2 rounded-2xl">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/menu-takoyaki.webp" alt="Daftar Menu 1">
+                    <div class="p-3 text-center">
+                        <h3 class="font-bold text-sm">Varian Takoyaki</h3>
                     </div>
-                    <div class="flex gap-4">
-                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                            <i data-lucide="clock" class="w-5 h-5 text-brand-orange"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Jam Operasional</h4>
-                            <p class="text-gray-400 text-sm">Setiap Hari: 08:00 - 23:59 WIB</p>
-                        </div>
+                </div>
+                <div class="menu-card glass-card p-2 rounded-2xl">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/menu-takoyaki-02.webp" alt="Daftar Menu 2">
+                    <div class="p-3 text-center">
+                        <h3 class="font-bold text-sm">Paket Hemat</h3>
                     </div>
-                    
-                    <a href="https://wa.me/6285225870228?text=Shareloc%20Outlet%20Banyumanik" target="_blank" class="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-white text-black rounded-xl font-bold text-sm hover:bg-brand-orange hover:text-white transition">
-                        <i data-lucide="navigation" class="w-4 h-4"></i> BUKA GOOGLE MAPS
-                    </a>
+                </div>
+                <div class="menu-card glass-card p-2 rounded-2xl">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/menu-okonomiyaki.webp" alt="Menu Okonomiyaki">
+                    <div class="p-3 text-center">
+                        <h3 class="font-bold text-sm">Varian Okonomiyaki</h3>
+                    </div>
+                </div>
+                <div class="menu-card glass-card p-2 rounded-2xl">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/okonomiyaki-spesial-takoyaki.webp" alt="Menu Spesial">
+                    <div class="p-3 text-center">
+                        <h3 class="font-bold text-sm">Menu Spesial</h3>
+                    </div>
                 </div>
             </div>
-
-            <div class="h-[400px] w-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative group">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.1799945682337!2d110.40387238885496!3d-7.105127799999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708989dcb2a2ef%3A0xaa83a5f17b6a8e7a!2sTakoyaki%20dari%20Tuhan%20Untuk%20Kamu%20dan%20Aku%20Outlet%2002!5e0!3m2!1sid!2sid!4v1769704039454!5m2!1sid!2sid" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"></iframe>
-                <div class="absolute inset-0 bg-black/20 pointer-events-none group-hover:bg-transparent transition"></div>
-            </div>
         </div>
-
-        <footer class="mt-24 border-t border-white/5 pt-12 text-center">
-            <div class="font-display font-black text-xl md:text-2xl tracking-tighter mb-4 text-white">
-                TaKOYAKI <span class="text-brand-orange">dari Tuhan</span> <br>
-                <span class="text-sm font-light italic text-gray-500">untuk Kamu dan Aku</span>
-            </div>
-            <p class="text-[10px] text-gray-500 font-bold tracking-widest uppercase mb-8">Premium Japanese Street Food • Since 2024</p>
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="#" class="text-gray-400 hover:text-white transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-            </div>
-            <p class="text-[10px] text-gray-700">© 2026 TaKOYAKI dari Tuhan. All Rights Reserved. <br> Powered by Naga Titan Protocol.</p>
-        </footer>
     </section>
 
-    <script>
-        lucide.createIcons();
-    </script>
+    <section id="promo" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display text-3xl md:text-4xl font-black mb-8">INFO <span class="text-brand-orange">PROMO & CABANG</span></h2>
+            
+            <div class="flex overflow-x-auto gap-4 pb-8 snap-x">
+                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-01.webp" class="snap-center h-64 md:h-80 w-auto rounded-xl object-contain bg-white/5 border border-white/10" alt="Promo 1">
+                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-02.webp" class="snap-center h-64 md:h-80 w-auto rounded-xl object-contain bg-white/5 border border-white/10" alt="Promo 2">
+                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-03.webp" class="snap-center h-64 md:h-80 w-auto rounded-xl object-contain bg-white/5 border border-white/10" alt="Promo 3">
+                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/voucher-bithday-sale-takoyaki.webp" class="snap-center h-64 md:h-80 w-auto rounded-xl object-contain bg-white/5 border border-white/10" alt="Voucher Ultah">
+                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/daftar-cabang-outlet-takoyaki.webp" class="snap-center h-64 md:h-80 w-auto rounded-xl object-contain bg-white/5 border border-white/10" alt="Daftar Cabang">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-brand-orange/10 border-y border-brand-orange/20">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+            <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/ekspresi-menikmati-takoyaki.webp" class="w-32 h-32 rounded-full object-cover border-4 border-brand-orange" alt="Testimoni">
+            <div class="text-center md:text-left">
+                <div class="flex justify-center md:justify-start gap-1 text-brand-gold mb-2">★★★★★</div>
+                <p class="text-lg italic font-light">"Jujur ini takoyaki paling enak di Banyumanik. Isiannya gak pelit, sausnya mantap. Wajib coba!"</p>
+                <h4 class="font-bold mt-4 text-white">Pelanggan Setia</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-4 bg-black border-t border-white/10 text-center">
+        <h2 class="font-display text-2xl font-black tracking-tight mb-2">TAKOYAKI DARI TUHAN</h2>
+        <p class="text-xs text-brand-orange font-bold tracking-[0.3em] uppercase mb-8">Untuk Kamu dan Aku</p>
+        
+        <div class="flex justify-center gap-6 mb-8 text-gray-500">
+            <a href="#" class="hover:text-white transition">Instagram</a>
+            <a href="#" class="hover:text-white transition">TikTok</a>
+            <a href="#" class="hover:text-white transition">WhatsApp</a>
+        </div>
+        
+        <p class="text-[10px] text-gray-700">© 2026 Takoyaki Dari Tuhan. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
