@@ -27,7 +27,7 @@
     <style>
         body { background-color: #050505; color: white; overflow-x: hidden; }
         .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; }
-        .glass-nav { background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .glass-nav { background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
         .ambient-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at 50% 0%, #331100 0%, #000000 70%); pointer-events: none; }
     </style>
 </head>
@@ -37,11 +37,11 @@
     
     <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="leading-none">
-                <div class="font-display font-black text-lg md:text-xl tracking-tighter">TAKOYAKI DARI TUHAN</div>
-                <div class="text-[10px] md:text-xs text-brand-orange font-bold tracking-widest uppercase">Untuk Kamu dan Aku</div>
+            <div class="font-display font-black text-xs md:text-lg tracking-tight uppercase leading-snug">
+                TAKOYAKI DARI TUHAN<br class="md:hidden"> UNTUK KAMU DAN AKU
             </div>
-            <a href="https://wa.me/6285225870228?text=Halo%20Admin,%20mau%20pesan%20Takoyaki%20Pudakpayung" target="_blank" class="bg-brand-orange text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-white hover:text-black transition shadow-[0_0_15px_#FF5500]">
+            
+            <a href="https://wa.me/6285225870228?text=Halo%20Admin,%20mau%20pesan%20Takoyaki%20Pudakpayung" target="_blank" class="bg-brand-orange text-white px-4 py-2 md:px-5 rounded-full text-[10px] md:text-xs font-bold hover:bg-white hover:text-black transition shadow-[0_0_15px_#FF5500] whitespace-nowrap">
                 PESAN ONLINE ➜
             </a>
         </div>
@@ -159,12 +159,16 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="font-display text-3xl font-black mb-8 text-center">GALERI <span class="text-brand-orange">PROMO</span></h2>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="col-span-2 glass-card p-2 rounded-xl">
-                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/voucher-bithday-sale-takoyaki.webp" class="w-full h-full object-cover rounded-lg" alt="Voucher Ultah">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-2 rounded-xl h-64 md:h-80 overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-01.webp" class="w-full h-full object-contain rounded-lg" alt="Promo 1">
                 </div>
-                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-01.webp" class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition" alt="Promo 1">
-                <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-02.webp" class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition" alt="Promo 2">
+                <div class="glass-card p-2 rounded-xl h-64 md:h-80 overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-02.webp" class="w-full h-full object-contain rounded-lg" alt="Promo 2">
+                </div>
+                <div class="glass-card p-2 rounded-xl h-64 md:h-80 overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/sutato-1272/takoyaki-banyumanik/main/promo-takoyaki-03.webp" class="w-full h-full object-contain rounded-lg" alt="Promo 3">
+                </div>
             </div>
         </div>
     </section>
@@ -223,8 +227,7 @@
     </section>
 
     <footer class="py-8 bg-black text-center border-t border-white/10 mt-10">
-        <p class="font-display font-black text-xl mb-1">TAKOYAKI DARI TUHAN</p>
-        <p class="text-[10px] text-gray-500 tracking-widest uppercase mb-4">Untuk Kamu dan Aku</p>
+        <p class="font-display font-black text-lg md:text-xl mb-1 uppercase">TAKOYAKI DARI TUHAN UNTUK KAMU DAN AKU</p>
         <p class="text-[10px] text-gray-700">© 2026 Powered by Naga Titan Protocol.</p>
     </footer>
 
